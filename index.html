@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Neighbourhood</title>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
+  <script src="./components/navigator.js"></script>
+  <script src="./components/eventHandler.js"></script>
+</head>
+<body>
+  <a-scene>
+    <!-- Sky Box -->
+    <a-sky id="sky-box" radius="5000"></a-sky>
+
+    <!-- Main Container -->
+    <a-entity id="main-container" navigator>
+    </a-entity>
+
+    <!-- Camera -->
+    <a-camera id="camera" wasd-controls="enabled:false;">
+      <!-- App Title -->
+      <a-entity id="title" position="0 0.73 -1"
+        text="font: exo2bold; align: center; width: 2; color: #000;">
+      </a-entity>
+
+      <!-- CURSOR -->
+      <a-entity id="camera-cursor" cursor position="0 0 -1"
+        geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: #fff; shader: flat">
+      </a-entity>
+
+    </a-camera>
+  </a-scene>
+</body>
+</html>
